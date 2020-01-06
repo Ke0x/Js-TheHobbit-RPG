@@ -1,0 +1,350 @@
+@font-face {
+    font-family: Ringm;
+    src: url(./fonts/anirm___.ttf);
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 150px; 
+    height: 20px;
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 15px;
+  }
+  
+  .slider:hover {
+    opacity: 1; 
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: darkslategrey;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: darkslategrey; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    
+  }
+
+body {
+    background-image: url('./img/backgrounds/map.jpg');
+    background-repeat:no-repeat;
+    margin: 0px;
+    font-family: Ringm;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.titre {
+  font-size: 18px;
+  text-align: center;
+}
+
+.conteneur {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.divtitre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategrey;
+    height: 80px;
+    width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+}
+
+.imgperso {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.persocontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 1em;
+}
+
+.perso {
+    background-size: 100% 200%; 
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, darkslategrey 50%);
+    transition: background-position .2s ease-in;
+    cursor: pointer;
+}
+.perso:hover {
+    background-position: 0 -100%;
+
+}
+
+.persotitre {
+    background-color: darkslategrey;
+    text-align: center;
+    margin-block-start: 0;
+    border-radius: 20px;
+}
+
+.statsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats {
+    width: 500px;
+    margin-top: 2em;
+    text-align: center;
+    background-color: darkslategrey;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#sDescription {
+    font-size: 12px;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.interface {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.imginterface {
+    border-style: solid;
+    border-width: 3px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.vieinterface {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgb(179, 42, 53);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.magieinterface {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    left: 30px;
+    background-color: rgb(60, 89, 182);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.enemyImg {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.fightInterface {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    left: 0; 
+    right: 0; 
+    margin-top: 100px;
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 25px;
+}
+
+.imgFight {
+    border-style: solid;
+    border-width: 3px;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
+
+.vieFight {
+    position: absolute;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+    left: 0; 
+    right: 0;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: rgb(179, 42, 53);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.panelAttaques {
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    left: 0; 
+    right: 0;
+    bottom: 20px;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 50px;
+}
+
+.buttonAttaques {
+    margin: 10px;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(112, 103, 103);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.imgAttaques {
+    height: 50px;
+    width: 50px;
+}
+
+.descriptionAttaques {
+    position: absolute;
+    height: 40px;
+    width: 400px;
+    left: 0; 
+    right: 0;
+    bottom: 130px;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 18px;
+}
+
+.buttonAttaques:hover {
+    cursor: pointer
+}
+
+.keyBtn {
+    position: absolute;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+    left: 0; 
+    right: 0;
+    margin-left: auto; 
+    margin-right: auto;
+    background-color: rgb(112, 103, 103);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.keyBtn:hover {
+    cursor: pointer;
+}
+
+.keyImg {
+    width: 70px;
+    height: 70px;
+}
+
+.keyInventaire {
+    position: absolute;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    bottom: 160px;
+    right: -90px;
+    background-color: rgb(112, 103, 103);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.pierreInventaire {
+    position: absolute;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    bottom: 50px;
+    right: -100px;
+    background-color: rgb(112, 103, 103);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+}
